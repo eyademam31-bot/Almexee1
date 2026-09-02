@@ -1,0 +1,14 @@
+{
+  "name": "almexiky-webapp",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler pages dev public --d1=DB",
+    "deploy": "wrangler pages deploy public",
+    "db:migrate:local": "wrangler d1 migrations apply almexiky-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply almexiky-db --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
